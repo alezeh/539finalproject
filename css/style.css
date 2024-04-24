@@ -9,6 +9,20 @@ body {
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
+/* Dark theme specific styles */
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-theme a, .dark-theme .navbar a, .dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4, .dark-theme h5, .dark-theme h6 {
+    color: #fff;
+}
+
+.dark-theme .navbar {
+    background-color: #555;
+}
+
 /* Skip link styling */
 .skip a {
     position: absolute;
@@ -64,16 +78,19 @@ a:hover {
     color: white;
     padding: 10px 0;
     text-align: center;
+    display: flex;
+    justify-content: space-between; /* Aligns items on the space between */
+    align-items: center;
 }
 
 .nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
 }
 
 .nav-links li {
-    display: inline;
     padding: 0 20px;
 }
 
@@ -92,13 +109,13 @@ a:hover {
     margin-right: 20px;
 }
 
+/* Container styling */
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Creates three columns */
     gap: 20px; /* Spacing between grid items */
     margin: 20px;
 }
-
 
 .container-index {
     max-width: 1200px;

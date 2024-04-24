@@ -8,33 +8,46 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <title>Ann Arbor Unveiled</title>
 </head>
+<body> 
 <div class="skip"><a href="#main">Skip to Content</a></div>
 <header>
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="food.html">Food</a></li>
-      <li><a href="drinks.html">Drinks</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="drinks.html">Drinks</a></li>
+            <li><button id="theme-toggle" style="padding: 5px 10px;">Switch Theme</button></li>
+        </ul>
+    </nav>
 </header>
-  <body>
 <main class="container-index" id="main">
-  <section> 
-  <h1>Ann Arbor Unveiled: An Almost Townie's Guide</h1>
-    <img class="header-img" src="images/brad-switzer-0G3Kj9L2JH0-unsplash.jpg" alt="State Street at night time." width="100%">
-    <p>
-        Welcome to "Ann Arbor Unveiled"! As a student who's called this vibrant city home for five years, I'm thrilled to share my curated guide to Ann Arbor's finest. 
-        This site is your ultimate resource for discovering where to savor the best meals, enjoy refreshing drinks, and embrace the joy of living in this unique town. 
-        Designed for students, locals, and visitors alike, our recommendations span from cozy dining spots and lively bars to the most relaxing places to unwind. 
-        But that's not all – we'll guide you through the best shopping experiences, recreational activities, and tranquil spots to just be. 
-        Whether you're looking to settle, work, or study here, let us navigate you through the heart of Ann Arbor. Dive in, and prepare to be delighted by what this nearly townie has to unveil!
-    </p>
-  </section> 
-
-  </main>
-  <footer>
+    <section> 
+        <h1>Ann Arbor Unveiled: An Almost Townie's Guide</h1>
+        <img class="header-img" src="images/brad-switzer-0G3Kj9L2JH0-unsplash.jpg" alt="State Street at night time" width="100%">
+        <p>
+            Welcome to "Ann Arbor Unveiled"! As a student who's called this vibrant city home for five years, I'm thrilled to share my curated guide to Ann Arbor's finest. 
+            This site is your ultimate resource for discovering where to savor the best meals, enjoy refreshing drinks, and embrace the joy of living in this unique town. 
+            Designed for students, locals, and visitors alike, our recommendations span from cozy dining spots and lively bars to the most relaxing places to unwind. 
+            But that's not all – we'll guide you through the best shopping experiences, recreational activities, and tranquil spots to just be. 
+            Whether you're looking to settle, work, or study here, let us navigate you through the heart of Ann Arbor. Dive in, and prepare to be delighted by what this nearly townie has to unveil!
+        </p>
+    </section> 
+</main>
+<footer>
     <p>Alezeh Mumtaz &copy; 2024</p>
-  </footer>
-  </body>
-  </html>
+</footer>
+
+<script>
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-theme');
+        localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+    });
+</script>
+</body>
+</html>
